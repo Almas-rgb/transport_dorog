@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Дневник</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css" />
+</head>
+
+<body>
+    <section class="hero is-info">
+        <div class="hero-body">
+            <div class="container">
+                <h1 class="title">
+                    Дневник
+                </h1>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+
+            <article class="media">
+                <div class="media-content">
+                    <div class="content">
+                        <a href="{% url 'add' %}">Добавить новую запись</a>
+                    </div>
+                </div>
+            </article>
+            {% for entry in entries %}
+                <article class="media">
+                    <div class="media-content">
+                        <div class="content">
+                            <p>
+                                <strong>{{ entry.date_posted }}</strong>
+                                <br> {{ entry.text }}
+                            </p>
+                        </div>
+                    </div>
+                </article>
+            {% endfor %}
+
+            <article class="media">
+            <div class="media-content">
+                <div class="content">
+                    <p>
+                        <strong> 12 Апреля 2021 09:00</strong>
+                        <br> Работа с входящей корреспонденцией.
+                    </p>
+                </div>
+            </div>
+        </article>
+
+                <article class="media">
+                <div class="media-content">
+                    <div class="content">
+                        <p>
+                            <strong>12 Апреля 2021 10:00</strong>
+                            <br> Аппаратное совещание.
+                        </p>
+                    </div>
+                </div>
+            </article>
+
+            <article class="media">
+                <div class="media-content">
+                    <div class="content">
+                        <p>
+                            <strong>12 Апреля 2021 12:00</strong>
+                            <br> Работа с исходящей корреспонденцией.
+                        </p>
+                    </div>
+                </div>
+            </article>
+
+            <article class="media">
+                <div class="media-content">
+                    <div class="content">
+                        <p>
+                            <strong>12 Апреля 2021 13:00 - 14:30</strong>
+                            <br> Обеденный перерыв.
+                        </p>
+                    </div>
+                </div>
+            </article>
+
+            <article class="media">
+                <div class="media-content">
+                    <div class="content">
+                        <p>
+                            <strong>12 Апреля 2021 14:30</strong>
+                            <br> Выезд на объект (АО Международный аэропорт "Костанай").
+                        </p>
+                    </div>
+                </div>
+            </article>
+
+            <article class="media">
+                <div class="media-content">
+                    <div class="content">
+                        <p>
+                            <strong>12 Апреля 2021 16:00</strong>
+                            <br> Совещание с участием партии "Нур Отан" (доклад на тему "Социально-экономическое развитие автодорожной отрасли за первый квартал и планы на 2021 года").
+                        </p>
+                    </div>
+                </div>
+            </article>
+
+            <article class="media">
+                <div class="media-content">
+                    <div class="content">
+                        <p>
+                            <strong>12 Апреля 2021 18:00</strong>
+                            <br> Встреча с директором ТОО "ТурисТрансСервис" (тама: Расширение направлений).
+                        </p>
+                    </div>
+                </div>
+            </article>
+
+            <article class="media">
+                <div class="media-content">
+                    <div class="content">
+                        <p>
+                            <strong>13 Апреля 2021 09:00</strong>
+                            <br> Работа с входящей корреспонденцией.
+                        </p>
+                    </div>
+                </div>
+            </article>
+
+            <article class="media">
+                <div class="media-content">
+                    <div class="content">
+                        <p>
+                            <strong>13 Апреля 2021 09:45</strong>
+                            <br> Плановое совещание с коллективом.
+                        </p>
+                    </div>
+                </div>
+            </article>
+
+            <article class="media">
+                <div class="media-content">
+                    <div class="content">
+                        <p>
+                            <strong>13 Апреля 2021 11:00</strong>
+                            <br> Прием граждан.
+                        </p>
+                    </div>
+                </div>
+            </article>
+
+            <article class="media">
+                <div class="media-content">
+                    <div class="content">
+                        <p>
+                            <strong>13 Апреля 2021 13:00 - 14:30</strong>
+                            <br> Обеденный перерыв.
+                        </p>
+                    </div>
+                </div>
+            </article>
+
+            <article class="media">
+                <div class="media-content">
+                    <div class="content">
+                        <p>
+                            <strong>13 Апреля 2021 14:30</strong>
+                            <br> Работа над планом финансирования 2022 года (отбор проектов).
+                        </p>
+                    </div>
+                </div>
+            </article>
+
+            <article class="media">
+                <div class="media-content">
+                    <div class="content">
+                        <p>
+                            <strong>13 Апреля 2021 15:30</strong>
+                            <br> Выезд на объект (а/д Подъезд к г. Костанай, 6 км).
+                        </p>
+                    </div>
+                </div>
+            </article>
+
+            <article class="media">
+                <div class="media-content">
+                    <div class="content">
+                        <p>
+                            <strong>13 Апреля 2021 17:00</strong>
+                            <br> Работа с отделом технического надзора.
+                        </p>
+                    </div>
+                </div>
+            </article>
+
+            <article class="media">
+                <div class="media-content">
+                    <div class="content">
+                        <p>
+                            <strong>13 Апреля 2021 18:00</strong>
+                            <br> Работа с корреспонденцией.
+                        </p>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+
+    </section>
+</body>
+
+</html>

@@ -1,0 +1,111 @@
+{% extends "blog/base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+
+    <article class="media content-section">
+      <!-- <h3>Обратная связь</h3>
+      <p>Мы постоянно работаем над улучшением и наполнением нашего сайта.</p>
+      <p>Присылайте нам, пожалуйста, ваши пожелания и замечания. Также будем очень благодарны за обнаруженные вами ошибки в наших публикациях или работе сайта.</p>
+      <br />
+    <form method="POST">
+      {% csrf_token %}
+      {{ form.as_p }}
+        <button type="submit" class="btn btn-outline-info">Отправить</button>
+    </form> -->
+    <div id="wrapper">
+      <!-- Begin Content -->
+      <div class="content">
+        <h3>Обратная связь</h3>
+        <p>Мы постоянно работаем над улучшением и наполнением нашего сайта.</p>
+        <p>Присылайте нам, пожалуйста, ваши пожелания и замечания. Также будем очень благодарны за обнаруженные вами ошибки в наших публикациях или работе сайта.</p>
+        <!-- Begin Form -->
+        <div class="contact-left">
+          <div id="contact-form">
+            <!--begin:notice message block-->
+            <div id="note"></div>
+            <!--begin:notice message block-->
+            <form id="ajax-contact-form" method="post" action="#">
+              <div class="labels">
+                <p>
+                  <label for="name">Имя</label>
+                  <br />
+                  <input class="required inpt" type="text" name="name" id="name" value="" />
+                </p>
+                <p>
+                  <label for="email">E-Mail</label>
+                  <br />
+                  <input class="required inpt" type="text" name="email" id="email" value="" />
+                </p>
+              </div>
+              <div class="comments">
+                <p>
+                  <textarea class="textbox" name="message" id="message" rows="6" cols="30"></textarea>
+                </p>
+                <br />
+              </div>
+              <label id="load" style="display:none"></label>
+              <input id="submit-button" class="button gray stripe" type="submit" name="submit" value="Отправить" />
+            </form>
+          </div>
+
+          <script>
+    $('#send').click (function () {
+    	var email = $('#email').val ();
+    	var name = $('#name').val ();
+    	var message = $('#message').val ();
+    	$.ajax({
+    		url:    	'ajax/feedback.php',
+    		type:		'POST',
+    		cache: 		false,
+    		data:   	{'name':name, 'email':email, 'message':message},
+    		dataType:	'html',
+    		beforeSend: function () {
+    			$('#send').attr ("disabled", "disabled");
+    		},
+    		success: function(data) {
+    			if (data == true) {
+    				$('#name').val ("");
+    				$('#email').val ("");
+    				$('#message').val ("");
+    				$('#send').text ("Сообщение отправлено");
+    				$('#email').css ("border-color", "#60fc8c");
+    				$('#name').css ("border-color", "#60fc8c");
+    				$('#message').css ("border-color", "#60fc8c");
+    			} else {
+    				if (data == false)
+    					alert ("Что-то пошло не так! Сообщение не отправлено");
+    				else {
+    					switch (data) {
+    					case "Имя не указано":
+    					$('#name').css ("border-color", "#f7b4b4");
+    					break;
+    					case "Сообщение не указано":
+    					$('#message').css ("border-color", "#f7b4b4");
+    					break;
+    					case "Неправильный e-mail":
+    					$('#email').css ("border-color", "#f7b4b4");
+    					break;
+    					default:
+    					$('#email').css ("border-color", "#f7b4b4");
+    					$('#message').css ("border-color", "#f7b4b4");
+    					$('#name').css ("border-color", "#f7b4b4");
+    					}
+    				}
+    			}
+    			$('#send').removeAttr ("disabled");
+    		}
+    	});
+    });
+    </script>
+          <!-- End Form -->
+        </div>
+
+        <div class="clear"></div>
+        <div class="divider"></div>
+
+        <div class="clear"></div>
+      </div>
+      <!-- End Content -->
+    </div>
+        </article>
+{% endblock content %}
