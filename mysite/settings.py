@@ -26,7 +26,10 @@ SECRET_KEY = '@2=wzslgbgv%=a1xnj+lw!2oxh6)b3$$wh!f^dqj*d+!z+-p!m'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    '127.0.0.1'
+    'transportidorog.herokuapp.com'
+]
 
 
 # Application definition
