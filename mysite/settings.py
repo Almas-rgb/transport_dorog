@@ -27,8 +27,7 @@ SECRET_KEY = '@2=wzslgbgv%=a1xnj+lw!2oxh6)b3$$wh!f^dqj*d+!z+-p!m'
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    '127.0.0.1'
-    'transportidorog.herokuapp.com'
+    'transportidorog.herokuapp.com', 'localhost', '127.0.0.1'
 ]
 
 
