@@ -8,4 +8,4 @@ class EntryForm(ModelForm):
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        self.fields['text'].widget.attrs.update({'class' : 'textarea', 'placeholder' : 'О чем ты думаешь?'})
+        self.fields['text'].widget.attrs.update({'class' : 'textarea', 'placeholder' : ''})

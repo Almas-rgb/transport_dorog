@@ -33,58 +33,59 @@ document.addEventListener('DOMContentLoaded', function() {
     dayMaxEvents: true, // allow "more" link when too many events
     events: [
       {
-        title: 'Событие на весь день',
-        start: '2021-05-01'
+        title: 'Доклад',
+        start: '2021-06-01'
       },
       {
-        title: 'Длинное событие',
-        start: '2021-05-07',
-        end: '2021-05-10'
-      },
-      {
-        groupId: 999,
-        title: 'Повторяющееся событие',
-        start: '2021-05-09T16:00:00'
+        title: 'Проверка',
+        start: '2021-06-07',
+        end: '2021-06-09'
       },
       {
         groupId: 999,
-        title: 'Повторяющееся событие',
-        start: '2021-05-16T16:00:00'
+        title: 'Собеседование',
+        start: '2021-06-09T16:00:00'
+      },
+      {
+        groupId: 999,
+        title: 'Собеседование',
+        start: '2021-06-16T16:00:00'
       },
       {
         title: 'Конференция',
-        start: '2021-05-11',
-        end: '2021-05-13'
+        start: '2021-06-11',
+        end: '2021-06-12'
       },
       {
         title: 'Встреча',
-        start: '2021-05-12T10:30:00',
-        end: '2021-05-12T12:30:00'
+        start: '2021-06-18T10:30:00',
+        end: '2021-06-18T12:30:00'
       },
       {
         title: 'Обед',
-        start: '2021-05-12T12:00:00'
+        start: '2021-06-18T12:00:00'
       },
       {
         title: 'Встреча',
-        start: '2021-05-12T14:30:00'
+        start: '2021-06-18T14:30:00'
       },
       {
         title: 'Счастливый час',
-        start: '2021-05-12T17:30:00'
+        start: '2021-06-18T17:30:00'
       },
       {
         title: 'Обед',
-        start: '2021-05-12T20:00:00'
+        start: '2021-06-18T20:00:00'
       },
       {
         title: 'День рождения',
-        start: '2021-05-13T07:00:00'
+        start: '2021-06-13T07:00:00'
       },
       {
-        title: 'Нажмите для Google',
-        url: 'http://google.com/',
-        start: '2021-05-28'
+        title: 'Управление пассажирского транспорта и автомобильных дорог',
+        url: 'https://www.gov.kz/memleket/entities/kostanai-zhol-kolik?lang=ru',
+        start: '2021-06-28',
+        end: '2021-07-02'
       }
     ]
   });

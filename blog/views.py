@@ -93,8 +93,8 @@ def biography(request):
     return render(request, 'blog/biography.html', {'title': 'biography'})
 
 
-def diary(request):
-    return render(request, 'blog/diary.html', {'title': 'diary'})
+def vacancies(request):
+    return render(request, 'blog/vacancies.html', {'title': 'vacancies'})
 
 
 def struktura(request):

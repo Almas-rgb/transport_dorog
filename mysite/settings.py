@@ -24,10 +24,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = '@2=wzslgbgv%=a1xnj+lw!2oxh6)b3$$wh!f^dqj*d+!z+-p!m'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = [
-    'transportidorog.herokuapp.com', 'localhost', '127.0.0.1'
+    'transportidorog.herokuapp.com'
 ]
 
 
@@ -140,5 +140,5 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-EMAIL_HOST_USER = os.environ.get('')
-EMAIL_HOST_PASSWORD = os.environ.get('')
+EMAIL_HOST_USER = 'seven6496@gmail.com'
+EMAIL_HOST_PASSWORD = 'vorona07'
