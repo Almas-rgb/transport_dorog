@@ -24,10 +24,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = '@2=wzslgbgv%=a1xnj+lw!2oxh6)b3$$wh!f^dqj*d+!z+-p!m'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = [
-    'transportidorog.herokuapp.com'
+    'transportidorog.herokuapp.com', '127.0.0.1' 
 ]
 
 
